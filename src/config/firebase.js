@@ -3,17 +3,16 @@ import 'firebase/auth';
 import 'firebase/storage';
 import 'firebase/firestore';
 
-// Use your own configs!
 const app = firebase.initializeApp({
-  apiKey: 'AIzaSyBCS_66Lh7MZvbYbwoM0YMv4oHpDcexAps',
-  authDomain: 'auctioneer-7020f.firebaseapp.com',
-  projectId: 'auctioneer-7020f',
-  storageBucket: 'auctioneer-7020f.appspot.com',
-  messagingSenderId: '159246459335',
-  appId: '1:159246459335:web:b200f4e877df1aa00fb9e2',
-});
+    apiKey: "AIzaSyB-jfgzvTwKv9zY8F6R29PQ0XlFTW1eG60",
+    authDomain: "naijaauctioneer.firebaseapp.com",
+    projectId: "naijaauctioneer",
+    storageBucket: "naijaauctioneer.appspot.com",
+    messagingSenderId: "260960484906",
+    appId: "1:260960484906:web:6f249a1b2283bc4fdf8d53"
+})
 
-export const timestamp = firebase.firestore.FieldValue.serverTimestamp;
-export const firestoreApp = app.firestore();
-export const storageApp = app.storage();
-export const authApp = app.auth();
+ export const timestamps = firebase.firestore.FieldValue.serverTimestamp;
+ export const firestoreApp = app.firestore()
+ export const storageApp = app.storage()
+ export const authApp = app.auth()
