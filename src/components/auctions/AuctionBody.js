@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { AddAuction } from './AddAuction';
+import { AuctionCard } from './AuctionCard';
 import {ProgressBar} from './ProgressBar';
 
 export const AuctionBody = () => {
@@ -18,7 +19,13 @@ const {docs} = useFirestore('auctions')
 
                 {currentUser && <AddAuction setAuction={setAuction}/>}
 
-                {docs && <h1>doc exist {docs.length} </h1>}
+                {docs && (
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        {docs.map((doc) => {
+                          return <AuctionCard item={doc} key={doc.id}/>
+                        })}
+                    </div>
+                )}
             </div>
         </div>
     )

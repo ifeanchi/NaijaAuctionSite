@@ -14,7 +14,7 @@ export const useFirestore = (collection) => {
             setDocs(document);
         })
 
-        return subscribe;
+        return () => subscribe();
 
     }, [collection])
 
