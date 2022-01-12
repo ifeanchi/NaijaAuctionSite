@@ -1,9 +1,13 @@
 FROM node:current alpine
 
+COPY . /app
+
 WORKDIR  /app
 
 COPY . .
 
 RUN npm install
 
-ENTRYPOINT ["node", "app.js"]
+EXPOSE 3000
+
+CDM ["npm", "start"]
