@@ -19,7 +19,6 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                 className ="w-100"/>
                 <div className="card-body">
                     <p className ="lead display-6">{props.item.title}</p>
-                    <h5>price:{props.item.currentPrice}</h5>
                     <div className="d-flex justify-content-between align-item-center">
                         <h5>
                             {days * 24 + hours} hr: {minutes} min: {seconds} sec
