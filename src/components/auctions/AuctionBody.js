@@ -26,6 +26,7 @@ const {docs} = useFirestore('auctions')
                         })}
                     </div>
                 )}
+                
             </div>
         </div>
     )

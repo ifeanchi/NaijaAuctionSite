@@ -23,6 +23,7 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                         <h5>
                             {days * 24 + hours} hr: {minutes} min: {seconds} sec
                         </h5>
+                        <button>bid</button>
                     </div>
                 </div>
            </div>
