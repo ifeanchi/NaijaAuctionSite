@@ -52,7 +52,7 @@ export const AddAuction = ({setAuction}) => {
 
     return (
         <>
-        <div className = "col d-flex justify-content-center">
+        <div className = "col d-flex justify-content-center my-3">
             <div onClick={openForm} className = "btn btn-outline-secondary mx-2">
                 Add Auction
             </div>
