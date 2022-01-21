@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Countdown from 'react-countdown'
 import { AuthContext } from '../../context/AuthContext';
 
