@@ -20,6 +20,7 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                 className ="w-100"/>
                 <div className="card-body">
                     <p className ="lead display-6">{props.item.title}</p>
+                    <p className ="lead display-3">{props.item.price}</p>
                     <div className="d-flex justify-content-between align-item-center">
                         <h5>
                             {days * 24 + hours} hr: {minutes} min: {seconds} sec
@@ -45,6 +46,6 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
 
 export const AuctionCard = ({item}) => {
     let expiredDate = item.duration;
-    const {currentUser} = useContext(AuthContext)
+    const { currentUser } = useContext(AuthContext)
     return <Countdown owner={currentUser} date={expiredDate} item={item} renderer={renderer}/>
 }
