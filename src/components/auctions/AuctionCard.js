@@ -20,12 +20,11 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                 className ="w-100"/>
                 <div className="card-body">
                     <p className ="lead display-6">{props.item.title}</p>
-                    <p className ="lead display-3">{props.item.price}</p>
                     <div className="d-flex justify-content-between align-item-center">
                         <h5>
                             {days * 24 + hours} hr: {minutes} min: {seconds} sec
                         </h5>
-                        <p className="card-text">{props.item.description}</p>
+                        {/* <p className="card-text">{props.item.description}</p> */}
                         <div className="d-flex justify-content-between align-item-center">
                             <div className="btn-group">
                                 {!props.owner? (
