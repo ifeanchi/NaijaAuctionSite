@@ -46,7 +46,7 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
 
 export const AuctionCard = ({item}) => {
     let expiredDate = item.duration;
-    const { currentUser, auctionBid, endAuction } = useContext(AuthContext)
+    const { currentUser} = useContext(AuthContext)
     return <Countdown 
     owner={currentUser} 
     date={expiredDate} 

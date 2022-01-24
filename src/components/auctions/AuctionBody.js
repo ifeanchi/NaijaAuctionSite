@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { Alert } from 'react-bootstrap';
 import { AuthContext } from '../../context/AuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { AddAuction } from './AddAuction';
@@ -18,7 +17,6 @@ const {docs} = useFirestore('auctions')
 
                 {auction && <ProgressBar auction={auction} setAuction={setAuction}/>}
 
-                {bidMsg && <Alert variant="info">{bidMsg}</Alert>}
 
                 {currentUser && <AddAuction setAuction={setAuction}/>}
 
