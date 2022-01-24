@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Alert } from 'react-bootstrap';
 import { AuthContext } from '../../context/AuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { AddAuction } from './AddAuction';
@@ -8,7 +9,7 @@ import {ProgressBar} from './ProgressBar';
 export const AuctionBody = () => {
 const [auction, setAuction] = useState(null)
 
-const {currentUser} = useContext(AuthContext)
+const {currentUser, bidMsg} = useContext(AuthContext)
 const {docs} = useFirestore('auctions')
 
     return (
@@ -16,6 +17,8 @@ const {docs} = useFirestore('auctions')
             <div className = "container">
 
                 {auction && <ProgressBar auction={auction} setAuction={setAuction}/>}
+
+                {bidMsg && <Alert variant="info">{bidMsg}</Alert>}
 
                 {currentUser && <AddAuction setAuction={setAuction}/>}
 
