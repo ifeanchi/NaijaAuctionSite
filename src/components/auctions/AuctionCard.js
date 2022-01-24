@@ -27,7 +27,7 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                     </div>
                     <p className="card-text">{props.item.description}</p>
                     <div className="d-flex justify-content-between align-item-center">
-                        <div className="btn-group">
+                        <div>
                             {!props.owner ? (
                               <div className="btn btn-outline-secondary">Bid</div>
                             ) : props.owner.email === props.item.email ? ( 
@@ -36,7 +36,7 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                                <div className="btn btn-outline-secondary">Bid</div>
                             )}
                         </div>
-                        <p className="display-6">{props.item.price}</p>
+                        <p className="display-6">${props.item.currentPrice}</p>
                     </div>
                 </div>
            </div>
