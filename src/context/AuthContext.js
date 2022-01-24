@@ -51,7 +51,7 @@ export const AuthProvider = ( { children } ) => {
         return () => clearTimeout(interval);
     }, [bidMsg])
 
-  return <AuthContext.Provider value={{currentUser, login, register, logout, auctionBid, endAuction, bidMsg}}>
+  return <AuthContext.Provider value={{currentUser, login, register, logout}}>
       {!loading && children}
       </AuthContext.Provider>
 };

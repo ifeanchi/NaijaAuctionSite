@@ -29,10 +29,9 @@ const renderer = ({days, hours, minutes, seconds, completed, props}) => {
                     <div className="d-flex justify-content-between align-item-center">
                         <div>
                             {!props.owner ? (
-                              <div className="btn btn-outline-secondary" 
-                              onClick={()=> props.auctionBid()}>Bid</div>
+                              <div className="btn btn-outline-secondary">Bid</div>
                             ) : props.owner.email === props.item.email ? ( 
-                               <div className="btn btn-outline-secondary" onClick={() => props.endAuction()}>Cancel Auction</div>
+                               <div className="btn btn-outline-secondary">Cancel Auction</div>
                             ) : ( 
                                <div className="btn btn-outline-secondary">Bid</div>
                             )}
@@ -53,8 +52,6 @@ export const AuctionCard = ({item}) => {
     date={expiredDate} 
     item={item} 
     enderer={renderer}
-    auctionBid={auctionBid}
-    endAuction={endAuction}
     />
 }
 
